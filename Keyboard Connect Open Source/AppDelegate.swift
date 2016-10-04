@@ -2,26 +2,68 @@
 //  AppDelegate.swift
 //  Keyboard Connect Open Source
 //
-//  Created by Arthur Yidi on 10/3/16.
+//  Created by Arthur Yidi on 4/11/16.
 //  Copyright © 2016 Arthur Yidi. All rights reserved.
 //
 
-import Cocoa
+import AppKit
+import Foundation
+import IOBluetooth
 
-@NSApplicationMain
+func myCGEventCallback(proxy : CGEventTapProxy,
+                       type : CGEventType,
+                       event : CGEvent,
+                       refcon : UnsafeMutablePointer<Void>) -> Unmanaged<CGEvent>? {
+
+    let btKey = UnsafeMutablePointer<BTKeyboard>(refcon).memory
+    switch type {
+    case .KeyUp:
+        if let nsEvent = NSEvent(CGEvent: event) {
+            btKey.sendKey(-1, nsEvent.modifierFlags.rawValue)
+        }
+        break
+    case .KeyDown:
+        if let nsEvent = NSEvent(CGEvent: event) {
+            btKey.sendKey(Int(nsEvent.keyCode), nsEvent.modifierFlags.rawValue)
+        }
+        break
+    default:
+        break
+    }
+
+    return Unmanaged.passUnretained(event)
+}
+
+var btKey: BTKeyboard?
+
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!
+    func applicationDidBecomeActive(notification: NSNotification) {
+        btKey = BTKeyboard()
 
+        if !AXIsProcessTrusted() {
+            print("Enable accessibility setting to read keyboard events.")
+        }
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        // capture all key events
+        var eventMask: CGEventMask = 0
+        eventMask |= (1 << CGEventMask(CGEventType.KeyUp.rawValue))
+        eventMask |= (1 << CGEventMask(CGEventType.KeyDown.rawValue))
+        eventMask |= (1 << CGEventMask(CGEventType.FlagsChanged.rawValue))
+
+        if let eventTap = CGEventTapCreate(.CGSessionEventTap,
+                                           .HeadInsertEventTap,
+                                           .Default,
+                                           eventMask,
+                                           myCGEventCallback,
+                                           &btKey) {
+            let runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0)
+            CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, kCFRunLoopCommonModes)
+            CGEventTapEnable(eventTap, true)
+        }
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+        btKey?.terminate()
     }
-
-
 }
-

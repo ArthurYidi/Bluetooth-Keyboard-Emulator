@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>0000 - ServiceRecordHandle</key>
+	<integer>65538</integer>
+	<key>0001 - ServiceClassIDList</key>
+	<array>
+		<data>ESQ=</data>
+	</array>
+	<key>0004 - ProtocolDescriptorList</key>
+	<array>
+		<array>
+			<data>AQA=</data>
+			<integer>17</integer>
+		</array>
+		<array>
+			<data>ABE=</data>
+		</array>
+	</array>
+	<key>0005 - BrowseGroupList</key>
+	<array>
+		<data>EAI=</data>
+	</array>
+	<key>0006 - LanguageBaseAttributeIDList</key>
+	<array>
+		<integer>25966</integer>
+		<integer>106</integer>
+		<integer>256</integer>
+	</array>
+	<key>000D - AdditionalProtocolDList</key>
+	<array>
+		<array>
+			<array>
+				<data>AQA=</data>
+			</array>
+			<array>
+				<data>ABE=</data>
+			</array>
+		</array>
+	</array>
+	<key>0009 - BluetoothProfileDescriptorList</key>
+	<array>
+		<array>
+			<data>ABE=</data>
+			<integer>257</integer>
+		</array>
+	</array>
+	<key>0100 - ServiceName</key>
+	<string>Keyboard</string>
+	<key>0101 - ServiceDescription</key>
+	<string>BT Keyboard</string>
+	<key>0102 - ProviderName</key>
+	<string>Generic</string>
+	<key>0201 - HIDParserVersion</key>
+	<integer>273</integer>
+	<key>020A - HIDRemoteWake</key>
+	<true/>
+	<key>020E - HIDBootDevice</key>
+	<true/>
+	<key>0202 - HIDDeviceSubclass</key>
+	<integer>64</integer>
+	<key>0203 - HIDCountryCode</key>
+	<integer>33</integer>
+	<key>0204 - HIDVirtualCable</key>
+	<true/>
+	<key>0205 - HIDReconnectInitiate</key>
+	<true/>
+	<key>0206 - HIDDescriptorList</key>
+	<array>
+		<array>
+			<dict>
+				<key>DataElementType</key>
+				<integer>1</integer>
+				<key>DataElementSize</key>
+				<integer>0</integer>
+				<key>DataElementValue</key>
+				<data>Ig==</data>
+			</dict>
+			<dict>
+				<key>DataElementType</key>
+				<integer>4</integer>
+				<key>DataElementValue</key>
+				<data>BQEJBqEBhQEFBxngKecVACUBdQGVCIEClQF1CIEBBQgZASkFlQV1AZEClQF1A5EBBQcZACr/AJUGdQgVACb/AIEABf8JA3UIlQGBAsAFDAkBoQGFUgUMdQGVARUAJQEJzYEGCbWBAgm2gQIJuIEGCeKBBgnqgQIJ6YECgQHA</data>
+			</dict>
+		</array>
+	</array>
+	<key>0209 - HIDBatteryPower</key>
+	<true/>
+	<key>0207 - HIDLANGIDBaseList</key>
+	<array>
+		<integer>1033</integer>
+		<integer>256</integer>
+	</array>
+</dict>
+</plist>
