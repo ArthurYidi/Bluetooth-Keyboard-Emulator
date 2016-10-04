@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		228F345C1DA3014B00F264A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F345B1DA3014B00F264A0 /* AppDelegate.swift */; };
-		228F345E1DA3014B00F264A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228F345D1DA3014B00F264A0 /* Assets.xcassets */; };
-		228F34611DA3014C00F264A0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228F345F1DA3014C00F264A0 /* MainMenu.xib */; };
+		228F34691DA3016200F264A0 /* BTKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F34681DA3016200F264A0 /* BTKeyboard.swift */; };
+		228F346B1DA302F600F264A0 /* SerialPortDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 228F346A1DA302F600F264A0 /* SerialPortDictionary.plist */; };
+		228F346D1DA310BD00F264A0 /* HIDReportDescriptor.txt in Resources */ = {isa = PBXBuildFile; fileRef = 228F346C1DA310BD00F264A0 /* HIDReportDescriptor.txt */; };
+		228F346F1DA3132100F264A0 /* KeyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F346E1DA3132100F264A0 /* KeyCodes.swift */; };
+		228F34731DA32B0900F264A0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F34721DA32B0900F264A0 /* main.swift */; };
+		228F34751DA32FE200F264A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F34741DA32FE200F264A0 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		228F34581DA3014B00F264A0 /* Keyboard Connect Open Source.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keyboard Connect Open Source.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		228F345B1DA3014B00F264A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		228F345D1DA3014B00F264A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		228F34601DA3014C00F264A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		228F34621DA3014C00F264A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		228F34681DA3016200F264A0 /* BTKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTKeyboard.swift; sourceTree = "<group>"; };
+		228F346A1DA302F600F264A0 /* SerialPortDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SerialPortDictionary.plist; sourceTree = "<group>"; };
+		228F346C1DA310BD00F264A0 /* HIDReportDescriptor.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HIDReportDescriptor.txt; sourceTree = "<group>"; };
+		228F346E1DA3132100F264A0 /* KeyCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCodes.swift; sourceTree = "<group>"; };
+		228F34721DA32B0900F264A0 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		228F34741DA32FE200F264A0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		228F34761DA3304C00F264A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +56,13 @@
 		228F345A1DA3014B00F264A0 /* Keyboard Connect Open Source */ = {
 			isa = PBXGroup;
 			children = (
-				228F345B1DA3014B00F264A0 /* AppDelegate.swift */,
-				228F345D1DA3014B00F264A0 /* Assets.xcassets */,
-				228F345F1DA3014C00F264A0 /* MainMenu.xib */,
-				228F34621DA3014C00F264A0 /* Info.plist */,
+				228F34721DA32B0900F264A0 /* main.swift */,
+				228F34741DA32FE200F264A0 /* AppDelegate.swift */,
+				228F34681DA3016200F264A0 /* BTKeyboard.swift */,
+				228F346E1DA3132100F264A0 /* KeyCodes.swift */,
+				228F346A1DA302F600F264A0 /* SerialPortDictionary.plist */,
+				228F346C1DA310BD00F264A0 /* HIDReportDescriptor.txt */,
+				228F34761DA3304C00F264A0 /* Info.plist */,
 			);
 			path = "Keyboard Connect Open Source";
 			sourceTree = "<group>";
@@ -116,8 +125,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228F345E1DA3014B00F264A0 /* Assets.xcassets in Resources */,
-				228F34611DA3014C00F264A0 /* MainMenu.xib in Resources */,
+				228F346B1DA302F600F264A0 /* SerialPortDictionary.plist in Resources */,
+				228F346D1DA310BD00F264A0 /* HIDReportDescriptor.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,22 +137,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228F345C1DA3014B00F264A0 /* AppDelegate.swift in Sources */,
+				228F34751DA32FE200F264A0 /* AppDelegate.swift in Sources */,
+				228F346F1DA3132100F264A0 /* KeyCodes.swift in Sources */,
+				228F34691DA3016200F264A0 /* BTKeyboard.swift in Sources */,
+				228F34731DA32B0900F264A0 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		228F345F1DA3014C00F264A0 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				228F34601DA3014C00F264A0 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		228F34631DA3014C00F264A0 /* Debug */ = {
@@ -231,7 +232,6 @@
 		228F34661DA3014C00F264A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Keyboard Connect Open Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -243,7 +243,6 @@
 		228F34671DA3014C00F264A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Keyboard Connect Open Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
