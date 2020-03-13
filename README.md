@@ -1,7 +1,7 @@
 # Bluetooth Keyboard Emulator
 Swift Bluetooth HID Keyboard Emulator
 
-> Open sourced from the [Keyboard Connect](http://arthuryidi.com/keyboard-connect/) project. The following sample shows how to publish a HID Bluetooth keyboard service.
+> Open sourced from the Keyboard Connect project. The following sample shows how to publish a HID Bluetooth keyboard service.
 
 ## How to Use
 
