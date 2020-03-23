@@ -1,7 +1,9 @@
 # Bluetooth Keyboard Emulator
 Swift Bluetooth HID Keyboard Emulator
 
-### After the release of macOS Catalina (10.15), I‘m unable to pair devices and publish HID services using Bluetooth Classic. Also Bluetooth LE (Low Energy) as provided by the “Core Bluetooth” APIs explicitly disallows publishing HID GATT service (0x1812) since macOS ~10.11. 🤷‍♂️
+### After the release of macOS Catalina (10.15), I‘m unable to pair devices and publish HID services using Bluetooth Classic. 🤷‍♂️
+
+#### Bluetooth LE (Low Energy) as provided by the “Core Bluetooth” APIs explicitly disallows publishing HID GATT service (0x1812) since macOS ~10.11. 
 
 ## How to Use
 
